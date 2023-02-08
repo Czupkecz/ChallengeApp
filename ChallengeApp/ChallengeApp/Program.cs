@@ -1,18 +1,18 @@
 ﻿// Zadanie domowe dzień 4
 
-var imie = "Marian";
-bool płećKobieta = false;
-var wiek = 29;
+var name = "Marian";
+bool isWoman = true;
+var age = 29;
 
-if (płećKobieta == true && wiek < 30)
+if (isWoman == true && age < 30)
 {
     Console.WriteLine("Kobieta poniżej 30 lat");
 }
-else if (imie == "Ewa" && płećKobieta == true)
+else if (name == "Ewa" && isWoman == true)
 {
     Console.WriteLine("Ewa, lat 33");
 }
-else if (wiek < 18 && płećKobieta != true)
+else if (age < 18 && isWoman != true)
 {
     Console.WriteLine("Niepełnoletni Mężczyzna");
 }
