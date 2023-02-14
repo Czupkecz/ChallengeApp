@@ -1,73 +1,29 @@
-﻿int number = 115426664;
-string numberAsString = number.ToString();
-char[] signs = numberAsString.ToArray();
+﻿//Napisz program w C#, który znajdzie maksymalną liczbę spośród trzech podanych liczb
+Console.WriteLine("Sprawdźmy, która z podanych 3 liczb jest największa" + "\n" + "Podaj pierwszą liczbę i naciśnij ENTER");
 
-int counter0 = 0; 
-int counter1 = 0;
-int counter2 = 0;
-int counter3 = 0;
-int counter4 = 0;
-int counter5 = 0;
-int counter6 = 0;
-int counter7 = 0;
-int counter8 = 0;
-int counter9 = 0;
+string number1 = Console.ReadLine();
 
+Console.WriteLine("Teraz podaj drugą liczbę i naciśnij ENTER");
 
-foreach (char sign in signs)
+string number2 = Console.ReadLine();
+
+Console.WriteLine("I ostatnią -> ENTER");
+
+string number3 = Console.ReadLine();
+
+int number1AsInteger = int.Parse(number1);
+int number2AsInteger = int.Parse(number2);
+int number3AsInteger = int.Parse(number3);
+
+if (number1AsInteger > number2AsInteger && number1AsInteger > number3AsInteger)
 {
-    if(sign == '0')
-    {
-        counter0++;
-    }
-    else if (sign == '1')
-    { 
-        counter1++;
-    }
-    else if (sign == '2')
-    {
-        counter2++;
-    }
-    else if (sign == '3')
-    {
-        counter3++;
-    }
-    else if (sign == '4')
-    {
-        counter4++;
-    }
-    else if (sign == '5')
-    {
-        counter5++;
-    }
-    else if (sign == '6')
-    {
-        counter6++;
-    }
-    else if (sign == '7')
-    {
-        counter7++;
-    }
-    else if (sign == '8')
-    {
-        counter8++;
-    }
-    else if (sign == '9')
-    {
-        counter9++;
-    }
-
+    Console.WriteLine("\n Największa liczba to:" + number1);
 }
-
-
-Console.WriteLine("0 ==> " + counter0);
-Console.WriteLine("1 ==> " + counter1);
-Console.WriteLine("2 ==> " + counter2);
-Console.WriteLine("3 ==> " + counter3);
-Console.WriteLine("4 ==> " + counter4);
-Console.WriteLine("5 ==> " + counter5);
-Console.WriteLine("6 ==> " + counter6);
-Console.WriteLine("7 ==> " + counter7);
-Console.WriteLine("8 ==> " + counter8);
-Console.WriteLine("9 ==> " + counter9);
-
+else if (number2AsInteger > number1AsInteger && number2AsInteger > number3AsInteger)
+{
+    Console.WriteLine("\n Największa liczba to:" + number2);
+}
+else
+{
+    Console.WriteLine("\n Największa liczba to: " + number3);
+}
