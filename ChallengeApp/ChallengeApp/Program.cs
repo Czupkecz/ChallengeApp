@@ -1,19 +1,42 @@
-﻿//Napisz program w C#, który sprawdzi czy liczba jest dodatnia, ujemna lub równa 0
-Console.WriteLine("Sprawdźmy, czy podana liczna jest dodatnia, ujamna bądź równa 0" + "\n" + "Podaj liczbę i naciśnij ENTER");
+﻿using ChallengeApp;
 
-string number1 = Console.ReadLine();
+Employee worker1 = new Employee("Adam", "Kamizelich", 25);
+Employee worker2 = new Employee("Daniel", "Kondzior", 39);
+Employee worker3 = new Employee("Harry", "Potter", 28);
 
-int number1AsInteger = int.Parse(number1);
+worker1.AddPoints(10);
+worker1.AddPoints(10);
+worker1.AddPoints(10);
+worker1.AddPoints(2);
+worker1.AddPoints(2);
 
-if (number1AsInteger > 0)
+worker2.AddPoints(1);
+worker2.AddPoints(2);
+worker2.AddPoints(3);
+worker2.AddPoints(4);
+worker2.AddPoints(4);
+
+worker3.AddPoints(10);
+worker3.AddPoints(10);
+worker3.AddPoints(10);
+worker3.AddPoints(10);
+worker3.AddPoints(10);
+
+
+//Console.WriteLine(worker1.Name + "_" + worker1.Surname + "_" + worker1.Age + "_" + worker1.Result);
+//Console.WriteLine(worker2.Name + "_" + worker2.Surname + "_" + worker2.Age + "_" + worker2.Result);
+//Console.WriteLine(worker3.Name + "_" + worker3.Surname + "_" + worker3.Age + "_" + worker3.Result + "\n");
+
+
+if (worker1.Result > worker2.Result && worker1.Result > worker3.Result)
 {
-    Console.WriteLine("\n Liczba " + number1 + " jest większa od 0");
+    Console.WriteLine(worker1.Name + "_" + worker1.Surname + "_" + worker1.Age + "_" + worker1.Result);
 }
-else if (number1AsInteger == 0)
+else if (worker2.Result > worker1.Result && worker1.Result > worker3.Result)
 {
-    Console.WriteLine("\n Liczba " + number1 + " jest równa 0");
+    Console.WriteLine(worker2.Name + "_" + worker2.Surname + "_" + worker2.Age + "_" + worker2.Result);
 }
 else
-{
-    Console.WriteLine("\n Liczba " + number1 + " jest mniejsza od 0");
+{ 
+    Console.WriteLine(worker3.Name + "_" + worker3.Surname + "_" + worker3.Age + "_" + worker3.Result);
 }
